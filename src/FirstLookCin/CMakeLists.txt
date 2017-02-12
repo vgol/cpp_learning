@@ -1,0 +1,1 @@
+add_executable(first_look_cin main.cpp)
