@@ -2,11 +2,21 @@
 
 using namespace std;
 
+int getValueFromUser()
+{
+    cout << "Enter a number: ";
+    int number;
+    cin >> number;
+    return number;
+}
+
 int main()
 {
-    int number;
-    cout << "Enter a number: ";
-    cin >> number;
-    cout << "You've entered: " << number << endl;
+    int first;
+    int second;
+
+    first = getValueFromUser();
+    second = getValueFromUser();
+    cout << first << "+" << second << "=" << first + second << endl;
     return 0;
 }
