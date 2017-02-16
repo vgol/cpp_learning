@@ -8,4 +8,4 @@ set(EXECUTABLE_OUTPUT_PATH bin)
 
 add_subdirectory(src/HelloWorld)
 add_subdirectory(src/FirstLookCin)
-
+add_subdirectory(src/FunctionParameters)
