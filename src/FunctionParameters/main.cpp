@@ -8,13 +8,16 @@ int doubleNumber(int number)
     return number * 2;
 }
 
+int getNumgerFromUser()
+{
+    int number;
+    cout << "Enter a number: ";
+    cin >> number;
+    return number;
+}
+
 int main()
 {
-    int num;
-
-    cout << "Enter a number: ";
-    cin >> num;
-    cout << "Doubled: " << doubleNumber(num) << endl;
-
+    cout << "Doubled: " << doubleNumber(getNumgerFromUser()) << endl;
     return 0;
 }
