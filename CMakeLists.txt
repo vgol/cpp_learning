@@ -4,7 +4,7 @@ project(cpp_learning)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(EXECUTABLE_OUTPUT_PATH bin)
+set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 
 add_subdirectory(src/HelloWorld)
 add_subdirectory(src/FirstLookCin)
