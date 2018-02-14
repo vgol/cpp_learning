@@ -1,0 +1,1 @@
+add_executable(input_strings input_strings.cpp)
