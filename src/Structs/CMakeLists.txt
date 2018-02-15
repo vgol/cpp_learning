@@ -1,0 +1,1 @@
+add_executable(advertising advertising.cpp advertising.h)
