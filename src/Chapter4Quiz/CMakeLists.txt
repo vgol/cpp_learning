@@ -1,0 +1,1 @@
+add_executable(monsters Monster.h Monster.cpp)
