@@ -25,23 +25,23 @@ std::string Monsters::printType(Monsters::Monster monster)
 
     std::string printableType;
 
-    if (monster.type == MonsterType::DRAGON) {
-        printableType = "Dragon";
-    }
-    else if (monster.type == MonsterType::GIANT_SPIDER) {
-        printableType = "Giant Spider";
-    }
-    else if (monster.type == MonsterType::OGRE) {
-        printableType = "Ogre";
-    }
-    else if (monster.type == MonsterType::ORK) {
-        printableType = "Ork";
-    }
-    else if (monster.type == MonsterType::SLIME) {
-        printableType = "Slime";
-    }
-    else {
-        printableType = "Unknown creature";
+    switch (monster.type)
+    {
+        case MonsterType::DRAGON:
+            printableType = "Dragon";
+            break;
+        case MonsterType::GIANT_SPIDER:
+            printableType = "Giant Spider";
+            break;
+        case MonsterType::OGRE:
+            printableType = "Ogre";
+            break;
+        case MonsterType::ORK:
+            printableType = "Ork";
+            break;
+        case MonsterType::SLIME:
+            printableType = "Slime";
+            break;
     }
 
     return printableType;
