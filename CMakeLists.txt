@@ -4,6 +4,8 @@ project(cpp_learning)
 
 set(CMAKE_CXX_STANDARD 17)
 
+include_directories(../Boost/include/boost-1_66)
+
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/bin)
 set(LIBRARY_OUTPUT_PATH ${CMAKE_SOURCE_DIR}/lib)
 
