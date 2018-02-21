@@ -12,7 +12,7 @@ void playHiLo();
 
 void playMultipleTimes();
 
-int getIntNum();
+int getIntNum(int guessNum);
 
 char getYesOrNo();
 

@@ -33,8 +33,7 @@ void hilo::playHiLo()
 
     for (int guessNum = 0; guessNum <= 7; ++guessNum)
     {
-        std::cout << "Guess #" << guessNum << ": ";
-        auto guess = getIntNum();
+        auto guess = getIntNum(guessNum);
 
         if (guess == key)
         {
@@ -54,11 +53,25 @@ void hilo::playHiLo()
     std::cout << "Sorry, you lose.  The correct number was " << key << ".\n";
 }
 
-int hilo::getIntNum()
+int hilo::getIntNum(int guessNum)
 {
-    int guess;
-    std::cin >> guess;
-    return guess;
+    while (true)
+    {
+        std::cout << "Guess #" << guessNum << ": ";
+        int guess;
+        std::cin >> guess;
+
+        if (std::cin.fail())
+        {
+            std::cin.clear();
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        }
+        else
+        {
+            std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+            return guess;
+        }
+    }
 }
 
 char hilo::getYesOrNo()
@@ -68,6 +81,11 @@ char hilo::getYesOrNo()
     {
         std::cout << "Would you like to play again (y/n)? ";
         std::cin >> answer;
+        if (std::cin.fail())
+        {
+            std::cin.clear();
+        }
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
     }
     while (not (answer == 'y' or answer == 'n' or answer == 'Y' or answer == 'N'));
 
