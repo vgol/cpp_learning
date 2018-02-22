@@ -9,7 +9,7 @@ int main()
     const int length(9);
     int array[length] = { 6, 3, 2, 9, 7, 1, 5, 4, 8 };
 
-    for (int iter = 0; iter < length; ++iter)
+    for (int iter = 0; iter < length - 1; ++iter)
     {
         for (int inx = 0; inx < length - 1; ++inx)
         {
