@@ -1,0 +1,1 @@
+add_executable(ptrs ptr_array.cpp)
